@@ -31,10 +31,53 @@
 
     #navber{
       background-color: transparent !important;
+      transition: 0.4s;
     }
 
     #navber.active{
       background-color: white !important;
+      
+    }
+    .nav-link,.navbar-brand{
+      opacity: 0.8;
+    }
+    .nav-link:hover,.navbar-brand:hover{
+      opacity: 1;
+    }
+
+    #navber.active .nav-link:hover,#navber.active .navbar-brand:hover{
+      color: #f4623a!important;
+    }
+    #navber.active .nav-link,#navber.active .navbar-brand{
+      color: black !important;
+    }
+
+@media (max-width:992px) {
+  #navber{
+    background-color: white !important ;
+  }
+  #navber .nav-link ,#navber .navbar-brand{
+    color: black !important;
+  }
+  #navber .nav-link:hover{
+    color: #f4623a!important;
+  }
+}
+
+    .line{
+      height: 3px !important;
+    width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #f4623a;
+    opacity: 1;
+    }
+
+    .btn{
+      background-color: #f4623a;
+      /* height: 60px; */
+      /* line-height: 60px;  */
+      padding: 20px 36px;
+
     }
   </style>
 </head>
@@ -44,7 +87,7 @@
   <header>
     <nav id="navber" class="navbar navbar-expand-lg navbar-light bg-light p-2 position-fixed w-100 ">
       <div class="container ">
-        <a class="nav-link fw-bolder text-black" href="#">Start Bootstrap
+        <a class="navbar-brand fw-bolder text-white" href="#">Start Bootstrap
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,17 +95,17 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav ">
-            <li class="nav-item mx-2">
-              <a class="nav-link text-black" href="#">About</a>
+            <li class="nav-item mx-2 fw-bold">
+              <a class="nav-link text-white" href="#">About</a>
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link text-black" href="#">Services</a>
+            <li class="nav-item mx-2 fw-bold">
+              <a class="nav-link text-white" href="#">Services</a>
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link text-black" href="#">Portfolio</a>
+            <li class="nav-item mx-2 fw-bold">
+              <a class="nav-link text-white" href="#">Portfolio</a>
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link text-black" href="#">Contact</a>
+            <li class="nav-item mx-2 fw-bold">
+              <a class="nav-link text-white" href="#">Contact</a>
             </li>
           </ul>
         </div>
@@ -75,12 +118,13 @@
       <div class="container h-100">
         <div class="row  h-100 align-items-center justify-content-center text-center ">
           <div class="col-lg-8 align-self-end">
-            <h1>Your Favorite Place for Free Bootstrap Themes</h1>
+            <h1 class="fs-1 text-white fw-bold">Your Favorite Place for Free Bootstrap Themes</h1>
+            <hr class="line">
           </div>
           <div class="col-lg-8 align-self-start">
-            <p>Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme
+            <p class="fs-5 text-white mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme
               and start customizing, no strings attached!</p>
-            <a href="">FIND OUT MORE</a>
+            <a href="" class="text-white btn rounded-pill fw-bold">FIND OUT MORE</a>
           </div>
 
         </div>
