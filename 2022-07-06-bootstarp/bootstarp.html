@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS only -->
   <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/f01ac06eae.js" crossorigin="anonymous"></script>
   <title>Document</title>
   <style>
@@ -119,6 +120,33 @@
       text-decoration: none;
       padding: 20px 36px;
     }
+
+    .icon {
+      font-size: 40px;
+      color: #f4623a;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      padding-top: 30px;
+    }
+
+    p {
+      opacity: 0.7;
+    }
+
+
+
+
+    .color {
+      background-color: #f4623ae0;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .img:hover .color {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -187,18 +215,159 @@
       </div>
     </section>
     <section>
-      <div class="container word text-center">
+      <div class="container-fluid word text-center">
         <h2 class="text-block fw-bold">At Your Service</h2>
         <hr class="banner-line">
-        <div class="row">
-          <div class="col-3"><div><i class="fa-solid fa-gem"></i></div></div>
-          <div class="col-3"><div><i class="fa-solid fa-laptop"></i></div></div>
-          <div class="col-3"></div>
-          <div class="col-3"></div>
+        <div class="row mx-0">
+          <div class="col-12 col-lg-3 col-md-6 cards">
+            <div class="icon">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h4 class="fw-bold">Sturdy Themes</h4>
+            <p class="
+            card-word">Our themes are updated regularly to keep them bug free!</p>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 cards">
+            <div class="icon">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h4 class="fw-bold">Up to Date</h4>
+            <p class="
+            card-word">All dependencies are kept current to keep things fresh.</p>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 cards">
+            <div class="icon">
+              <i class="bi bi-globe"></i>
+            </div>
+            <h4 class="fw-bold">Ready to Publish</h4>
+            <p class="
+          card-word">You can use this design as is, or you can make changes!</p>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 cards">
+            <div class="icon">
+              <i class="bi bi-heart"></i>
+            </div>
+            <h4 class="fw-bold">Made with Love</h4>
+            <p class="
+          card-word">Is it really open source if it's not made with love?</p>
+          </div>
         </div>
 
 
       </div>
+    </section>
+    <section>
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/1.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/2.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/3.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/4.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/5.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+            <img class="img-fluid" src="./img/6.jpg" alt="">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+              <div class="img-text  w-100 text-center">
+                <p class="fw-bold text-white">CATEGORY</p>
+                <h5 class="fw-bold text-white">Project Name</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section>
+      <div class="container-fluid p-0">
+        <div class="word bg-dark">
+          <div class="row justify-content-center align-items-center m-0">
+            <div class="col-lg-8 text-center ">
+              <h2 class="text-white fw-bold mb-5">Free Download at Start Bootstrap!</h2>
+              <a href="" class="text-black word-btn rounded-pill fw-bold">DOWNLOAD NOW!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <form action="">
+        <div class="container-fluid p-0">
+          <div class="word">
+            <div class="col-4 mx-auto text-center d-flex flex-column">
+              <h2 class="text-black">Let's Get In Touch!</h2>
+              <hr class="banner-line">
+              <p>Ready to start your next project with us? Send us a messages and we will get back to you as soon as
+                possible!</p>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInput1" placeholder="Full Name" aria-describedby="validationServer01Feedback" required>
+                  <label for="floatingInput1" class="form-label">Full Name</label>
+                  <div id="validationServer01Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInput2" placeholder="Email address" aria-describedby="validationServer02Feedback" required>
+                  <label for="floatingInput2" class="form-label">Email address</label>
+                  <div id="validationServer02Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInput3" placeholder="Email address" aria-describedby="validationServer03Feedback" required>
+                  <label for="floatingInput3" class="form-label">Full Name</label>
+                  <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="messages" id="floatingTextarea1"
+                  style="height: 100px"></textarea>
+                <label for="floatingTextarea1">Messages</label>
+              </div>
+              <a href="" class="text-white banner-btn rounded-pill fw-bold">SUBMIT</a>
+            </div>
+          </div>
+        </div>
+      
     </section>
   </main>
 
@@ -221,6 +390,8 @@
         navber.classList.remove('active')
       }
     })
+
+    const inputs = document.querySelectorAll('.input')
   </script>
 </body>
 
