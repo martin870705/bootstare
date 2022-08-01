@@ -78,7 +78,7 @@
         color: black !important;
       }
 
-      #navber .navbar-brand{
+      #navber .navbar-brand {
         opacity: 1;
       }
 
@@ -86,6 +86,7 @@
         color: #f4623a !important;
       }
     }
+
     #navber.active .navbar-brand:hover {
       color: black !important;
     }
@@ -113,7 +114,9 @@
       background-color: #f4623a;
     }
 
-
+    #navber.active .text-orange {
+      color: #f4623a !important;
+    }
 
     .word-line {
       height: 3px !important;
@@ -142,8 +145,9 @@
     p {
       opacity: 0.7;
     }
+
     .color {
-      background-color: #f4623ae0;
+      background-color: #f4623aef;
       opacity: 0;
       transition: 0.3s;
     }
@@ -152,13 +156,152 @@
       opacity: 1;
     }
 
-    #validationServer2-2Feedback.none{
-      display: none!important;
+    #validationServer2-2Feedback.none {
+      display: none !important;
     }
 
-    #validationServer02Feedback.none{
-      display: none!important;
+    #validationServer02Feedback.none {
+      display: none !important;
     }
+
+    .icon-phone {
+      font-size: 30px;
+      opacity: 0.7;
+    }
+
+
+
+    /* =========================================== */
+
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: transparent;
+      margin: auto;
+      padding: 0;
+      width: 62%;
+      border: 0px;
+      max-width: 1200px;
+      transition: 0.4s;
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 210px;
+      right: 200px;
+      font-size: 40px;
+      font-weight: bold;
+      opacity: 0.7;
+    }
+
+    .close:hover,
+    .close:focus {
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    /* Hide the slides by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+
+    .prev {
+      left: -180px;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: -180px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      opacity: 0.5;
+      color: white !important;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Caption text */
+    .caption-container {
+      text-align: center;
+      /* background-color: black; */
+      padding: 20px 0px;
+      color: white;
+    }
+
+    #caption {
+      margin: 0px;
+      font-size: 22px;
+    }
+
+    .demo {
+      display: none;
+    }
+
+    .anchor {
+      top: -56px;
+    }
+
+    .submit-btn{
+      background-color: #f4623a;
+      text-decoration: none;
+      padding: 20px 36px;
+      opacity: 0.7;
+    }
+
+    .submit-btn.active{
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    /* ====================================================== */
   </style>
 </head>
 
@@ -176,16 +319,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav ">
             <li class="nav-item mx-2 fw-bold">
-              <a class="nav-link text-white" href="#">About</a>
+              <a class="nav-link text-white" href="#for-about" id="navbar-about">About</a>
             </li>
             <li class="nav-item mx-2 fw-bold">
-              <a class="nav-link text-white" href="#">Services</a>
+              <a class="nav-link text-white" href="#for-service" id="navbar-service">Services</a>
             </li>
             <li class="nav-item mx-2 fw-bold">
-              <a class="nav-link text-white" href="#">Portfolio</a>
+              <a class="nav-link text-white" href="#for-portfolio" id="navbar-portfolio">Portfolio</a>
             </li>
             <li class="nav-item mx-2 fw-bold">
-              <a class="nav-link text-white" href="#">Contact</a>
+              <a class="nav-link text-white" href="#for-contact" id="navbar-contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -195,7 +338,7 @@
   </header>
   <main>
     <section>
-      <div class="banner">
+      <div class="banner" id="banner">
         <div class="container h-100">
           <div class="row  h-100 align-items-center justify-content-center text-center ">
             <div class="col-lg-8 align-self-end">
@@ -213,7 +356,7 @@
         </div>
     </section>
     <section>
-      <div class="container-fluid word orange">
+      <div class="container-fluid word orange position-relative" id="about">
         <div class="row justify-content-center align-items-center m-0">
           <div class="col-lg-8 text-center ">
             <h2 class="text-white fw-bold">We've got what you need!</h2>
@@ -224,10 +367,11 @@
             <a href="" class="text-black word-btn rounded-pill fw-bold">GET STARTED</a>
           </div>
         </div>
+        <div id="for-about" class="position-absolute anchor"></div>
       </div>
     </section>
     <section>
-      <div class="container-fluid word text-center">
+      <div class="container-fluid word text-center position-relative" id="service">
         <h2 class="text-block fw-bold">At Your Service</h2>
         <hr class="banner-line">
         <div class="row mx-0">
@@ -265,16 +409,17 @@
           </div>
         </div>
 
-
+        <div id="for-service" class="position-absolute anchor"></div>
       </div>
     </section>
     <section>
-      <div class="container-fluid">
+      <div class="container-fluid position-relative" id="portfolio">
 
         <div class="row">
-          <div class="col-lg-4 col-sm-6 p-0 img position-relative">
+          <div class="col-lg-4 col-sm-6 p-0 img position-relative" >
             <img class="img-fluid" src="./img/1.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(1)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -283,7 +428,8 @@
           </div>
           <div class="col-lg-4 col-sm-6 p-0 img position-relative">
             <img class="img-fluid" src="./img/2.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(2)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -292,7 +438,8 @@
           </div>
           <div class="col-lg-4 col-sm-6 p-0 img position-relative">
             <img class="img-fluid" src="./img/3.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(3)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -301,7 +448,8 @@
           </div>
           <div class="col-lg-4 col-sm-6 p-0 img position-relative">
             <img class="img-fluid" src="./img/4.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(4)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -310,7 +458,8 @@
           </div>
           <div class="col-lg-4 col-sm-6 p-0 img position-relative">
             <img class="img-fluid" src="./img/5.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(5)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -319,7 +468,8 @@
           </div>
           <div class="col-lg-4 col-sm-6 p-0 img position-relative">
             <img class="img-fluid" src="./img/6.jpg" alt="">
-            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center">
+            <div class="color w-100 h-100 position-absolute start-0 top-0 d-flex align-items-center"
+              onclick="openModal();currentSlide(6)">
               <div class="img-text  w-100 text-center">
                 <p class="fw-bold text-white">CATEGORY</p>
                 <h5 class="fw-bold text-white">Project Name</h5>
@@ -327,6 +477,8 @@
             </div>
           </div>
         </div>
+        <div id="for-portfolio" class="position-absolute anchor"></div>
+      </div>
     </section>
     <section>
       <div class="container-fluid p-0">
@@ -342,52 +494,138 @@
     </section>
     <section>
       <form action="">
-        <div class="container p-0">
+        <div class="container p-0 position-relative" id="contact">
           <div class="word">
             <div class="col-lg-6  mx-auto text-center d-flex flex-column">
               <h2 class="text-black">Let's Get In Touch!</h2>
               <hr class="banner-line">
-              <p>Ready to start your next project with us? Send us a messages and we will get back to you as soon as
+              <p class="mb-5">Ready to start your next project with us? Send us a messages and we will get back to you
+                as soon as
                 possible!</p>
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control input" id="floatingInput1" placeholder="Full Name" aria-describedby="validationServer01Feedback" required>
-                  <label for="floatingInput1" class="form-label">Full Name</label>
-                  <div id="validationServer01Feedback" class="invalid-feedback w-100 text-start">
-                    Please provide a valid city.
-                  </div>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control input" id="floatingInput2" placeholder="Email address" aria-describedby="validationServer02Feedback" required>
-                  <label for="floatingInput2" class="form-label">Email address</label>
-                  <div id="validationServer02Feedback" class="invalid-feedback w-100 text-start">
-                    An email is required.
-                  </div>
-                  <div id="validationServer2-2Feedback" class="invalid-feedback w-100 text-start">
-                    Email is not valid.
-                  </div>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control input" id="floatingInput3" placeholder="Email address" aria-describedby="validationServer03Feedback" required>
-                  <label for="floatingInput3" class="form-label">Full Name</label>
-                  <div id="validationServer03Feedback" class="invalid-feedback w-100 text-start">
-                    A phone number is required.
-                  </div>
-                </div>
               <div class="form-floating mb-3">
-                <textarea class="form-control input" placeholder="messages" id="floatingTextarea1"
-                  style="height: 100px"></textarea>
-                <label for="floatingTextarea1">Messages</label>
-                <div class="invalid-feedback  w-100 text-start">
-                A message is required.
+                <input type="text" class="form-control input" id="floatingInput1" placeholder="Full Name"
+                  aria-describedby="validationServer01Feedback" required>
+                <label for="floatingInput1" class="form-label">Full Name</label>
+                <div id="validationServer01Feedback" class="invalid-feedback w-100 text-start">
+                  Please provide a valid city.
                 </div>
               </div>
-              <a href="" class="text-white banner-btn rounded-pill fw-bold">SUBMIT</a>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control input" id="floatingInput2" placeholder="Email address"
+                  aria-describedby="validationServer02Feedback" required>
+                <label for="floatingInput2" class="form-label">Email address</label>
+                <div id="validationServer02Feedback" class="invalid-feedback w-100 text-start">
+                  An email is required.
+                </div>
+                <div id="validationServer2-2Feedback" class="invalid-feedback w-100 text-start">
+                  Email is not valid.
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control input" id="floatingInput3" placeholder="Email address"
+                  aria-describedby="validationServer03Feedback" required>
+                <label for="floatingInput3" class="form-label">Phone number</label>
+                <div id="validationServer03Feedback" class="invalid-feedback w-100 text-start">
+                  A phone number is required.
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control input" placeholder="messages" id="floatingTextarea1"
+                  style="height: 200px"></textarea>
+                <label for="floatingTextarea1">Messages</label>
+                <div class="invalid-feedback  w-100 text-start">
+                  A message is required.
+                </div>
+              </div>
+              <div class="text-white submit-btn rounded-pill fw-bold mb-5 submit">SUBMIT</div>
+              <div>
+                <i class="bi bi-phone icon-phone"></i>
+              </div>
+              <span>+1 (555) 123-4567</span>
             </div>
           </div>
+          <div id="for-contact" class="position-absolute anchor"></div>
         </div>
-      
+      </form>
     </section>
+
+
+
+    <!-- Images used to open the lightbox -->
+
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+
+          <img src="./img/1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+          <img src="./img/2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+          <img src="./img/3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+          <img src="./img/4.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+
+          <img src="./img/5.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+
+          <img src="./img/6.jpg" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div class="column">
+          <p class="demo">Project Name</p>
+
+        </div>
+        <div class="column">
+          <p class="demo">Project Name</p>
+        </div>
+
+        <div class="column">
+          <p class="demo">Project Name</p>
+        </div>
+
+        <div class="column">
+          <p class="demo">Project Name</p>
+        </div>
+        <div class="column">
+          <p class="demo">Project Name6</p>
+        </div>
+        <div class="column">
+          <p class="demo">Project Name</p>
+        </div>
+      </div>
+    </div>
   </main>
+  <footer>
+    <div class="bg-light py-5">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">Copyright © 2022 - Company Name</div>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -402,54 +640,141 @@
     const navber = document.querySelector('#navber')
     const email_required = document.querySelector('#validationServer02Feedback')
     const email_valid = document.querySelector('#validationServer2-2Feedback')
+    const navbar_about = document.querySelector('#navbar-about')
+    const navbar_service = document.querySelector('#navbar-service')
+    const navbar_portfolio = document.querySelector('#navbar-portfolio')
+    const navbar_contact = document.querySelector('#navbar-contact')
+    const about = document.querySelector('#about')
+    const service = document.querySelector('#service')
+    const portfolio = document.querySelector('#portfolio')
+    const contact = document.querySelector('#contact')
+    const submit_btn = document.querySelector('.submit-btn')
+
+
+
+
+
+
     document.addEventListener('scroll', function (e) {
-      
+      console.log(window.scrollY);
+      console.log(portfolio.offsetTop-58);
+
       if (window.scrollY > 0) {
         navber.classList.add('active')
+
+        if (window.scrollY >= contact.offsetTop-56) {
+          navbar_contact.classList.add('text-orange')
+          navbar_portfolio.classList.remove('text-orange')
+
+        }else if(window.scrollY >= portfolio.offsetTop-57){
+          navbar_contact.classList.remove('text-orange')
+          navbar_portfolio.classList.add('text-orange')
+          navbar_service.classList.remove('text-orange')
+
+        }else if(window.scrollY >= service.offsetTop-56){
+          navbar_portfolio.classList.remove('text-orange')
+          navbar_service.classList.add('text-orange')
+          navbar_about.classList.remove('text-orange')
+
+        }else if(window.scrollY >= about.offsetTop-56){
+          navbar_about.classList.add('text-orange')
+          navbar_service.classList.remove('text-orange')
+        }else{
+          navbar_about.classList.remove('text-orange')
+        }
+
       } else {
         navber.classList.remove('active')
       }
     })
 
     const inputs = document.querySelectorAll('.input')
-    console.log(inputs);
-    inputs.forEach(function(input,index){
-      input.addEventListener('input',function(){
-        if(index == 1){
-          if(input.value.includes('@')){
+
+    inputs.forEach(function (input, index) {
+      
+      input.addEventListener('input', function () {
+        if (index == 1) {
+          if (input.value.includes('@')) {
             input.classList.add('is-valid')
             input.classList.remove('is-invalid')
-          }else if(input.value == ''){
+          } else if (input.value == '') {
             email_required.classList.remove('none')
 
-          }else{
+          } else {
             email_required.classList.add('none')
             input.classList.remove('is-valid')
             input.classList.add('is-invalid')
           }
-        }else{
+        } else {
 
-          if(input.value != ''){
+          if (input.value != '') {
             input.classList.add('is-valid')
             input.classList.remove('is-invalid')
-          }else{
+          } else {
             input.classList.remove('is-valid')
             input.classList.add('is-invalid')
           }
         }
         
-      
+
       })
 
 
 
-
-      input.addEventListener('blur',function(){
-        if(input.value == ''){
+      console.log(input[0]);
+      input.addEventListener('blur', function () {
+        if (input.value == '') {
           input.classList.add('is-invalid')
         }
+
+        console.log(input[0]);
+        // if(input[0].classList.contains('is-valid') && input[1].classList.contains('is-valid') && input[2].classList.contains('is-valid') && input[2].classList.contains('is-valid')){
+        //   submit_btn.classList.add('active')
+        // }
       })
     })
+  </script>
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "flex";
+    }
+
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].textContent;
+    }
   </script>
 </body>
 
